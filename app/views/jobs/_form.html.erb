@@ -1,0 +1,32 @@
+<%= form_for(@job) do |f| %>
+<br/>
+<%= f.label :title,'Title' %><br/>
+<%= f.text_field :title %>
+<br/>
+<%= f.label :job_type,'Job type' %><br/>
+<%= f.text_field :job_type %>
+<br/>
+<%= f.label :job_name,'Job Name' %><br/>
+<%= f.text_field :job_name %>
+<br/>
+<%= f.label :company_name,'Company Name' %><br/>
+<%= f.text_field :company_name %>
+<br/>
+<%= f.label :location,'Location' %><br/>
+<%= f.text_field :location %>
+<br/>
+<%= f.label :url,'Url' %><br/>
+<%= f.text_field :url %>
+<br/>
+<%= f.label :description,'Description' %><br/>
+<%= f.text_field :description %>
+<br/>
+<%= f.label :apply_information,'Apply Information' %><br/>
+<%= f.text_field :apply_information %>
+<br/>
+<%= f.label :deadline,'Deadline' %><br/>
+<%= f.text_field :deadline %>
+<br/>
+<br/>
+<%= f.submit 'Post Job'%>
+<% end %>
