@@ -6,10 +6,12 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body style="background-color:#F7F2F0">
 <div class='container'>
-    <Logo style='font-size:50pt;'>Ruby Job!!</Logo>
-    <%= yield %>
+    <img src="/assets/logo.png" alt="Logo">
+    <Logo style='font-size:50pt; color:red;'>RubyJobs!</Logo><br/>
+    <small_title style='font-size:15pt; color:gray;'>Job board for Ruby and Rails developers in Taiwan</small_title>
+    <div style="background-color:white"><%= yield %></div>
 </div>
 </body>
 </html>

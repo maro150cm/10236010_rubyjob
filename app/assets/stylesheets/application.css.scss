@@ -1,0 +1,22 @@
+/*
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.center{
+    margin: 0 auto;
+}
+label{;
+    text-align:right;
+}
+.one-td{
+    width:160px;
+}
+.two-td{
+    width:160px;
+}
+.clear-tr-height{
+    height:20px;
+}
