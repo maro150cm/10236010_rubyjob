@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
     before_action :set_job, only: [:show, :edit, :update, :destroy]
     def index
-       @jobs=Job.page(params[:page]).per(3)
+       @jobs=Job.where('deadline >= ?',Time.now.to_date).page(params[:page]).per(3)
     end
     def new
        @job=Job.new
