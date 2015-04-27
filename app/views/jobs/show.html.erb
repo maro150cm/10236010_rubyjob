@@ -1,38 +1,74 @@
-<p>
-  <strong>Title:</strong>
-  <%= @job.title %>
-</p>
-<p>
-  <strong>Job Type:</strong>
-  <%= @job.job_type %>
-</p>
-<p>
-  <strong>Job Name:</strong>
-  <%= @job.job_name %>
-</p>
-<p>
-  <strong>Company Name:</strong>
-  <%= @job.company_name %>
-</p>
-<p>
-  <strong>Location:</strong>
-  <%= @job.location %>
-</p>
-<p>
-  <strong>Url:</strong>
-  <%= @job.url %>
-</p>
-<p>
-  <strong>Description:</strong>
-  <%= @job.description %>
-</p>
-<p>
-  <strong>Apply Information:</strong>
-  <%= @job.apply_information %>
-</p>
-<p>
-  <strong>Deadline:</strong>
-  <%= @job.deadline %>
-</p>
+<div class="container">
+  <br/>
+  <div>
+    <span style="font-size:20pt; font-weight:bold;"><%= @job.title %></span><br/>
+    <span style="font-size:8pt; color:gray; font-weight:bold;">
+      Posted:<%= @job.created_at.strftime("%Y-%m-%d") %>
+      Deadline:<%= @job.deadline %>
+    </span>
+  </div>
+  <br/>
+  <div>
+    <div class="row">
+       <div class="col-md-1">
+       </div>
+       <div class="col-md-2">
+          <strong>Job Type:</strong>
+       </div>
+       <div class="col-md-3">
+          <%= @job.job_type %>
+       </div>
+       <div class="col-md-1">
+       </div>
+       <div class="col-md-2">
+         <strong>Job Name:</strong>
+       </div>
+       <div class="col-md-3">
+          <%= @job.job_name %>
+       </div>
+    </div>
+    <div class="row">  
+       <div class="col-md-1">
+       </div>
+       <div class="col-md-2">
+         <strong>Company Name:</strong>
+       </div>
+       <div class="col-md-3">
+          <%= @job.company_name %>
+       </div>
+       <div class="col-md-1">
+       </div>
+       <div class="col-md-2">
+         <strong>Location:</strong>
+       </div>
+       <div class="col-md-3">
+          <%= @job.location %>
+       </div>
+    </div>
+    <div class="row">
+       <div class="col-md-1">
+       </div>
+        <div class="col-md-2">
+          <strong>Url:</strong>
+       </div>
+       <div class="col-md-9">
+          <%= @job.url %>
+       </div>
+    </div>
+    <div class="row">
+       <div class="col-md-1">
+       </div>
+        <div class="col-md-2">
+          <strong>Description:</strong>
+       </div>
+       <div class="col-md-9">
+          <%= @job.description %>
+       </div>
+    </div>
+  </div>
+  <div>
+    <span style="font-size:20pt; font-weight:bold;"><strong>Apply Information</strong></span><br/><%= @job.apply_information %>
+  </div>
+</div>
 <%= link_to 'Edit', edit_job_path(@job) %> |
 <%= link_to 'Back', jobs_path %>
