@@ -1,7 +1,11 @@
 class JobsController < ApplicationController
     before_action :set_job, only: [:show, :edit, :update, :destroy]
     def index
-       @jobs=Job.where('deadline >= ?',Time.now.to_date).page(params[:page]).per(3)
+        if (params[:title] or params[:location]) 
+            @jobs=Job.where('title Like ? and location Like ? and deadline >= ?',"%#{params[:title]}%","%#{params[:location]}%",Time.now.to_date).page(params[:page]).per(3)
+        else
+            @jobs=Job.where('deadline >= ?',Time.now.to_date).page(params[:page]).per(3)
+        end
     end
     def new
        @job=Job.new
